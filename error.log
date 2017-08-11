@@ -1,0 +1,57 @@
+::1 - GET /user/register HTTP/1.1 200 5127 - 11.788 ms
+::1 - GET /user/login HTTP/1.1 200 4237 - 7.680 ms
+::1 - GET / HTTP/1.1 500 21 - 13.710 ms
+[Fri Aug 11 2017 11:16:10 GMT+0800 (CST)] /
+Error: An error for test purposes.
+    at Object.handle (/home/linqiaojuan/桌面/node学习/node-project/microblog/routes/index.js:6:11)
+    at next_layer (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/route.js:103:13)
+    at Route.dispatch (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/route.js:107:5)
+    at /home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:195:24
+    at Function.proto.process_params (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:251:12)
+    at next (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:189:19)
+    at Function.proto.handle (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:234:5)
+    at Layer.router (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:23:12)
+    at trim_prefix (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:226:17)
+    at /home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:198:9
+    at Function.proto.process_params (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:251:12)
+    at next (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:189:19)
+    at Layer.handle (/home/linqiaojuan/桌面/node学习/node-project/microblog/app.js:75:5)
+    at trim_prefix (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:226:17)
+    at /home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:198:9
+    at Function.proto.process_params (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:251:12)
+[Fri Aug 11 2017 11:16:11 GMT+0800 (CST)] /
+Error: An error for test purposes.
+    at Object.handle (/home/linqiaojuan/桌面/node学习/node-project/microblog/routes/index.js:6:11)
+    at next_layer (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/route.js:103:13)
+    at Route.dispatch (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/route.js:107:5)
+    at /home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:195:24
+    at Function.proto.process_params (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:251:12)
+    at next (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:189:19)
+    at Function.proto.handle (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:234:5)
+    at Layer.router (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:23:12)
+    at trim_prefix (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:226:17)
+    at /home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:198:9
+    at Function.proto.process_params (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:251:12)
+    at next (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:189:19)
+    at Layer.handle (/home/linqiaojuan/桌面/node学习/node-project/microblog/app.js:75:5)
+    at trim_prefix (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:226:17)
+    at /home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:198:9
+    at Function.proto.process_params (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:251:12)
+[Fri Aug 11 2017 11:16:15 GMT+0800 (CST)] /
+Error: An error for test purposes.
+    at Object.handle (/home/linqiaojuan/桌面/node学习/node-project/microblog/routes/index.js:6:11)
+    at next_layer (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/route.js:103:13)
+    at Route.dispatch (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/route.js:107:5)
+    at /home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:195:24
+    at Function.proto.process_params (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:251:12)
+    at next (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:189:19)
+    at Function.proto.handle (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:234:5)
+    at Layer.router (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:23:12)
+    at trim_prefix (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:226:17)
+    at /home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:198:9
+    at Function.proto.process_params (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:251:12)
+    at next (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:189:19)
+    at Layer.handle (/home/linqiaojuan/桌面/node学习/node-project/microblog/app.js:75:5)
+    at trim_prefix (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:226:17)
+    at /home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:198:9
+    at Function.proto.process_params (/home/linqiaojuan/桌面/node学习/node-project/microblog/node_modules/express/lib/router/index.js:251:12)

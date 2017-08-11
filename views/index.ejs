@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <% include header.ejs %>
+</head>
+<body>
+<% include navigator.ejs %>
+<div id="container" class="container">
+<div class="hero-unit">
+  <h1>欢迎来到 Microblog</h1>
+  <p>Microblog 是一个基于 Node.js 的微博系统。</p>
+    <% if (user) { %>
+    <form id='say' class="well form-inline center" style="text-align:center;">
+        <input type="text" class="span8" name="post" id="input">
+        <button type="submit" class="btn btn-success"><i class="icon-comment icon-white"></i> 发言</button>
+    </form>
+    <% } %>
+</div>
+    <div id="post-list">Loading...</div>
+    <script id="post-list-template" type="x-tmpl-mustache">
+        <table class="table table-bordered table-hover">
+        <tr id='post-list-head'>
+            <th>comment</th>
+            <th>name</th>
+            <th>time</th>
+            </tr>
+        {{#posts}}
+        <tr>
+            <td>{{post}}</td>
+            <td>{{user}}</td>
+            <td>{{time|dateformat}}</td>
+            </tr>
+        {{/posts}}
+        </table>
+    </script>
+<% include footer.ejs %>
+    <script>
+        Mustache.Formatters = {
+            dateformat:function(obj, format) {
+            if (format == undefined) {
+                format = 'YYYY/MM/DD HH:mm:ss';
+            }
+            var ret = moment(obj).format(format);
+            return ret == 'Invalid date' ? '0000-00-00 00:00:00' : ret;
+        }
+        }
+        var getPosts = function(){
+            $.ajax({
+                type: "get",
+                url: "/post/all",
+                timeout: 10000,
+                contentType: "application/json;charset=UTF-8",
+                xhrFields: {
+                    withCredentials: true
+                },
+                dataType:'json',
+                success: function(result){
+                    if(result.status==0){
+                        console.log(result.message);
+                    }
+                    else{
+                        var template = $('#post-list-template').html();
+                        Mustache.parse(template);   // optional, speeds up future uses
+                        var rendered = Mustache.render(template, result);
+                        $('#post-list').html(rendered);
+                    }
+                }
+            });
+        }
+        getPosts();
+        $('#say').on('submit',function(e){
+            e.preventDefault();
+            var form=$('#say').serializeArray();
+            var dataList={};
+            for(var v of form){
+                dataList[v.name]=v.value;
+            }
+            if(dataList.post.length>0){
+                $.ajax({
+                    type: "POST",
+                    url: "/post",
+                    timeout: 10000,
+                    contentType: "application/json;charset=UTF-8",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    data:JSON.stringify(dataList),
+                    dataType: "json",
+                    success: (result)=>{
+                        if(result.status==0){
+                            console.log(result.message);
+                        }else{
+                            getPosts();
+                            console.log(result.message);
+                            $('#input').val('');
+                        }
+                    }
+                });
+            }else{
+                console.log('请输入评论内容');
+            }
+        });
+
+    </script>
+</div>
+</body>
+</html>
